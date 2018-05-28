@@ -9,7 +9,7 @@
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Title</label>
-            <input v-model="item.title" type="text" class="form-control" placeholder="Enter Title">
+            <input v-model="item.title" type="text" class="form-control" required placeholder="Enter Title">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Author</label>

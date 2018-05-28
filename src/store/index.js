@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    count: 2,
+    count: 6,
     authors: [
       'Dante Alighieri',
       'Fyodor Dostoevsky',
@@ -17,7 +17,7 @@ const store = new Vuex.Store({
       {
         id: 1,
         isbn: 502013850,
-        title:'Simple title',
+        title:'Simple title1',
         author: 'Dante Alighieri',
         description: 'Some description',
         date: new Date()
@@ -25,23 +25,51 @@ const store = new Vuex.Store({
       {
         id: 2,
         isbn: 502013850,
+        title:'Simple title2',
+        author: 'Dante Alighieri',
+        description: 'Some description',
+        date: new Date()
+      },
+      {
+        id: 3,
+        isbn: 502013850,
+        title:'Simple title',
+        author: 'Dante Alighieri',
+        description: 'Some description',
+        date: new Date()
+      },
+      {
+        id: 4,
+        isbn: 502013850,
+        title:'Simple title',
+        author: 'Dante Alighieri',
+        description: 'Some description',
+        date: new Date()
+      },
+      {
+        id: 5,
+        isbn: 502013850,
+        title:'Simple title',
+        author: 'Dante Alighieri',
+        description: 'Some description',
+        date: new Date()
+      },
+      {
+        id: 6,
+        isbn: 502013850,
         title:'Simple title',
         author: 'Dante Alighieri',
         description: 'Some description',
         date: new Date()
       }
-
     ]
   },
   getters: {
     getList: state => {
-      return state.list
+      return state.list.sort((a, b) => b.id - a.id)
     },
     getAuthors: state => {
       return state.authors
-    },
-    getItem: (state, id) => {
-      return state.list.find(i => i.id === id)
     }
   },
   mutations: {
